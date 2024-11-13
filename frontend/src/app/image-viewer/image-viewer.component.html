@@ -1,0 +1,8 @@
+<div class="images-container">
+  <div *ngFor="let image of images" class="image-item">
+    <a [href]="image" target="_blank">
+      <img [src]="image" alt="Imagen de Pato Aleatorio" />
+    </a>
+    <p>{{ getImageName(image) }}</p>
+  </div>
+</div>

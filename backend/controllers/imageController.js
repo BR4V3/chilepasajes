@@ -1,7 +1,7 @@
 const imageService = require('../services/imageService');
 
 // Controlador para obtener una imagen aleatoria
-async function getRandomImage(res) {
+async function getRandomImage(req, res) {
   try {
     const image = await imageService.getRandomImage();
     res.json({ imageUrl: `https://random-d.uk/api/${image}` });

@@ -1,0 +1,6 @@
+<app-image-filter
+  (randomImageEvent)="onGetRandomImage()"
+  (imagesByNumberEvent)="onGetImagesByNumber($event)"
+></app-image-filter>
+
+<app-image-viewer [images]="images"></app-image-viewer>
