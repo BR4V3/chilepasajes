@@ -5,7 +5,9 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root' // Esto hace que el servicio esté disponible globalmente sin necesidad de importarlo en un módulo
 })
+
 export class ApiService {
+
   private apiUrl = 'http://localhost:3000/api/images';
 
   constructor(private http: HttpClient) {}
