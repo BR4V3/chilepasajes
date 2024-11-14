@@ -1,7 +1,8 @@
-.image-tile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.gallery-image {
+  width: 100%; /* Ocupa todo el ancho de la celda */
+  height: 150px; /* Fija una altura uniforme para todas las imágenes */
+  object-fit: cover; /* Recorta la imagen para que se ajuste a la celda sin distorsionarse */
+  border-radius: 4px;
 }
 
 .image-container {
@@ -11,25 +12,67 @@
   text-align: center;
 }
 
-.gallery-image {
-  width: 100%; /* Asegura que la imagen ocupe el ancho completo de la celda */
-  max-height: 150px; /* Define una altura máxima para la imagen */
-  object-fit: cover; /* Recorta la imagen para ajustarla dentro de la celda */
-  border-radius: 4px;
-}
-
-
 .image-text-container {
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
-  padding: 4px 8px;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+  padding: 4px;
   border-radius: 4px;
-  margin-top: 4px;
-  width: 100%; /* Para que el fondo ocupe el ancho de la imagen */
+  width: 100%;
   text-align: center;
+  margin-top: 4px; /* Espacio entre la imagen y el texto */
 }
 
 .image-text {
-  color: #fff; /* Texto en blanco para mejor visibilidad */
+  color: #fff;
   font-size: 14px;
   margin: 0;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilos para pantallas menores a 768px */
+@media (max-width: 768px) {
+  /* Configura el grid para tener solo una columna en dispositivos pequeños */
+  .mat-grid-list {
+    grid-template-columns: 1fr; /* Una columna en lugar de tres */
+  }
+
+  .image-container {
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  .gallery-image {
+    height: auto; /* Ajusta la altura automáticamente para pantallas pequeñas */
+    max-height: 200px; /* Altura máxima para asegurar que no se expanda demasiado */
+  }
+
+  .image-text-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    padding: 4px;
+    border-radius: 4px;
+    width: 50%;
+    text-align: center;
+    margin-top: 4px; /* Espacio entre la imagen y el texto */
+  }
+
+  .image-text {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 425px) {
+
+
+
+  .gallery-image {
+    height: auto; /* Ajusta la altura automáticamente para pantallas pequeñas */
+    max-height: 125px; /* Altura máxima para asegurar que no se expanda demasiado */
+  }
+
+
 }

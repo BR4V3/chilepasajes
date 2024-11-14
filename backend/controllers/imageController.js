@@ -1,6 +1,6 @@
 const imageService = require('../services/imageService');
 
-// Controlador para obtener una imagen aleatoria
+// Obtener imagen aleatoria
 async function getRandomImage(req, res) {
   try {
     const image = await imageService.getRandomImage();
@@ -10,7 +10,7 @@ async function getRandomImage(req, res) {
   }
 }
 
-// Controlador para obtener imágenes filtradas por número
+// Obtener imagen x numero enviado.
 async function getImagesByNumber(req, res) {
     const { number } = req.params;
     if (isNaN(number) || number < 0) {

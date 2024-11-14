@@ -1,9 +1,11 @@
+// Axios para las solicitudes HTTP.
 const axios = require('axios');
 
-// URL de la API externa
+// API externa de patos
 const API_URL = 'https://random-d.uk/api/list';
 
-// Función para obtener la lista de imágenes
+
+// Obtener la lista de imagenes
 async function fetchImageList() {
     try {
       const response = await axios.get(API_URL);
@@ -15,19 +17,21 @@ async function fetchImageList() {
   }
   
 
-// Función para obtener una imagen aleatoria
+// Obtener una imagen aleatoria
 async function getRandomImage() {
   const images = await fetchImageList();
   const randomIndex = Math.floor(Math.random() * images.length);
   return images[randomIndex];
 }
 
+
+// Obtener una imagen x numero
 async function getImagesByNumber(number) {
     const images = await fetchImageList();
     const numberString = String(number);  // Convertir el número a cadena
     return images.filter(image => image.includes(numberString));
   }
-  
+
 
 module.exports = {
   getRandomImage,

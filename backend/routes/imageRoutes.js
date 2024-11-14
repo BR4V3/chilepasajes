@@ -2,10 +2,13 @@ const express = require('express');
 const router = express.Router();
 const imageController = require('../controllers/imageController');
 
-// Endpoint para imagen aleatoria
+
+
+// Endpoint imagen aleatoria
 router.get('/random', imageController.getRandomImage);
 
-// Endpoint para imágenes filtradas por número
+// Endpoint imágenes x numero
 router.get('/filter/:number', imageController.getImagesByNumber);
+
 
 module.exports = router;

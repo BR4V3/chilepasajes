@@ -20,16 +20,19 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ]
 })
-export class ImageFilterComponent {
-  filterNumber: number = 0;
 
+export class ImageFilterComponent {
+
+  filterNumber: number = 0;
+  //Ocupamos esto como Flag para poder conectarlos con el app.component
   @Output() randomImageEvent = new EventEmitter<void>();
   @Output() imagesByNumberEvent = new EventEmitter<number>();
 
+  //Emitimos "ruido" para que el app component se de cuenta que se gatillo la funcion.
   getRandomImage() {
     this.randomImageEvent.emit();
   }
-
+  //Emitimos "ruido" para que el app component se de cuenta que se gatillo la funcion.
   getImagesByNumber() {
     this.imagesByNumberEvent.emit(this.filterNumber);
   }

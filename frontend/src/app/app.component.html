@@ -1,6 +1,7 @@
-<mat-grid-list cols="2" rowHeight="1:1" gutterSize="16px">
+<mat-grid-list [cols]="gridCols"  [rowHeight]="rowHeight" gutterSize="16px">
+
   <!-- Sección Izquierda: Formulario de acciones -->
-  <mat-grid-tile>
+  <mat-grid-tile id="mat-card-left">
     <mat-card class="actions-card">
       <mat-card-title class="title-card-img">Pato de la suerte</mat-card-title>
       <mat-card-content id="content-card-img">
@@ -14,7 +15,7 @@
   </mat-grid-tile>
 
   <!-- Sección Derecha: Galería de Imágenes -->
-  <mat-grid-tile>
+  <mat-grid-tile id="mat-card-right" >
     <mat-card class="gallery-card">
       <mat-card-title class="title-card-img" >Galería de Patos</mat-card-title>
       <mat-card-content>

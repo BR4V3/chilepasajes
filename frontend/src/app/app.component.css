@@ -1,6 +1,6 @@
 .actions-card {
-  width: 400px; /* Tamaño fijo para que la tarjeta sea más grande */
-  height: 300px; /* Tamaño fijo para que la tarjeta sea más grande */
+  width: 400px;
+  height: 300px;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -8,29 +8,58 @@
 }
 
 .title-card-img {
-  font-size: 24px; /* Tamaño de fuente del título */
+  font-size: 24px;
   color: #fff;
   text-align: center;
-   /* Espacio entre el título y el contenido */
+
 }
 
 #content-card-img {
   display: flex;
   align-items: center;
-  gap: 16px; /* Espacio entre los elementos dentro del contenido */
+  gap: 16px;
   flex-grow: 1;
 }
 
 .gallery-card {
-  max-height: 500px;
-  width: 40vw; /* Ocupa el 50% del ancho de la ventana */
-  padding: 16px; /* Altura máxima de la galería */
-  overflow-y: auto; /* Habilita el scroll vertical si el contenido excede la altura */
+  max-height: 750px;
+  width: 40vw;
+  padding: 16px;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
 
 
+#mat-card-right {
+  left: calc(45% + 8px) !important;
+}
+
+@media (max-width: 768px) {
 
 
+  #mat-card-right {
+    left: 0 !important;
+  }
+
+  .gallery-card {
+    width: 70vw;
+    max-height: 350px;
+  }
+
+}
+
+@media (max-width: 425px) {
+
+  .gallery-card {
+    width: 90%;
+    height: 100%;
+  }
+
+  .actions-card {
+    width: 400px;
+    height: 200px;
+  }
+
+}
 
