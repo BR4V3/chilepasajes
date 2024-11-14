@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ApiService } from './api.service';
 import { CommonModule } from '@angular/common';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 import { ImageFilterComponent } from './image-filter/image-filter.component';
 import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 
@@ -10,9 +12,19 @@ import { ImageViewerComponent } from './image-viewer/image-viewer.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   providers: [ApiService],
-  imports: [CommonModule, ImageFilterComponent, ImageViewerComponent],
+  imports: [
+    CommonModule,
+    MatGridListModule,
+    MatCardModule,
+    ImageFilterComponent,
+    ImageViewerComponent
+  ],
 })
 export class AppComponent {
+
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   images: string[] = [];
 
   constructor(private apiService: ApiService) {}

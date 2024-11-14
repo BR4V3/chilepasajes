@@ -1,16 +1,18 @@
-
 <div class="filter-container">
   <button mat-raised-button color="primary" (click)="getRandomImage()">
     Obtener Imagen Aleatoria
   </button>
 
+  <div>
+    <mat-card-title class="title-card-img-number">Grupos de patos</mat-card-title>
   <div class="number-input">
     <mat-form-field appearance="fill">
       <mat-label>Ingrese un número</mat-label>
       <input matInput type="number" [(ngModel)]="filterNumber" />
     </mat-form-field>
-    <button mat-raised-button color="accent" (click)="getImagesByNumber()">
+    <button mat-raised-button  (click)="getImagesByNumber()">
       Buscar Imágenes
     </button>
   </div>
+</div>
 </div>

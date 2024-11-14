@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,7 +11,14 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-image-filter',
   templateUrl: './image-filter.component.html',
   styleUrls: ['./image-filter.component.css'],
-  imports: [CommonModule, MatButtonModule, MatFormFieldModule, MatInputModule, FormsModule]
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatInputModule,
+    FormsModule
+  ]
 })
 export class ImageFilterComponent {
   filterNumber: number = 0;

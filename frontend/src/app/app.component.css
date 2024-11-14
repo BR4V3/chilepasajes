@@ -1,0 +1,36 @@
+.actions-card {
+  width: 400px; /* Tamaño fijo para que la tarjeta sea más grande */
+  height: 300px; /* Tamaño fijo para que la tarjeta sea más grande */
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: #483443;
+}
+
+.title-card-img {
+  font-size: 24px; /* Tamaño de fuente del título */
+  color: #fff;
+  text-align: center;
+   /* Espacio entre el título y el contenido */
+}
+
+#content-card-img {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Espacio entre los elementos dentro del contenido */
+  flex-grow: 1;
+}
+
+.gallery-card {
+  max-height: 500px;
+  width: 40vw; /* Ocupa el 50% del ancho de la ventana */
+  padding: 16px; /* Altura máxima de la galería */
+  overflow-y: auto; /* Habilita el scroll vertical si el contenido excede la altura */
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+

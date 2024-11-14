@@ -1,6 +1,26 @@
-<app-image-filter
-  (randomImageEvent)="onGetRandomImage()"
-  (imagesByNumberEvent)="onGetImagesByNumber($event)"
-></app-image-filter>
+<mat-grid-list cols="2" rowHeight="1:1" gutterSize="16px">
+  <!-- Sección Izquierda: Formulario de acciones -->
+  <mat-grid-tile>
+    <mat-card class="actions-card">
+      <mat-card-title class="title-card-img">Pato de la suerte</mat-card-title>
+      <mat-card-content id="content-card-img">
+        <app-image-filter
+          (randomImageEvent)="onGetRandomImage()"
 
-<app-image-viewer [images]="images"></app-image-viewer>
+          (imagesByNumberEvent)="onGetImagesByNumber($event)"
+        ></app-image-filter>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+
+  <!-- Sección Derecha: Galería de Imágenes -->
+  <mat-grid-tile>
+    <mat-card class="gallery-card">
+      <mat-card-title class="title-card-img" >Galería de Patos</mat-card-title>
+      <mat-card-content>
+        <app-image-viewer [images]="images"></app-image-viewer>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+
+</mat-grid-list>
