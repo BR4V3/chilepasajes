@@ -4,9 +4,9 @@ Aplicación de galería de imágenes usando Angular y Node.js
 ## Instalación
 
 1. Clona el repositorio:
-    git clone https://github.com/BR4V3/chilepasajes.git
+   git clone https://github.com/BR4V3/chilepasajes.git
 
-2.Instala las dependencias del backend y frontend
+2. Instala las dependencias del backend y frontend
     cd chilepasajes/backend
     npm install
     cd ../frontend
